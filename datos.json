@@ -1,0 +1,1658 @@
+{
+  "resumen": {
+    "totalPlacas": 326,
+    "completos": 0,
+    "sinFin": 3,
+    "sinRegistros": 323,
+    "irregularidades": 0,
+    "porcentajeCompletos": 0.0,
+    "porcentajeSinFin": 0.9,
+    "porcentajeSinRegistros": 99.1,
+    "fecha": "21 de Enero de 2026"
+  },
+  "completos": [],
+  "sinFin": [
+    {
+      "placa": "GRZ8908",
+      "numeroVehiculo": "32",
+      "ciudad": "GUAYAQUIL",
+      "ultimoInicio": "2026-01-21 07:50",
+      "responsable": "jafarias@telconet.ec",
+      "horasSinFin": 35.7
+    },
+    {
+      "placa": "GTQ8353",
+      "numeroVehiculo": "GW 664",
+      "ciudad": "GUAYAQUIL",
+      "ultimoInicio": "2026-01-21 07:24",
+      "responsable": "llugo@telconet.ec",
+      "horasSinFin": 36.1
+    },
+    {
+      "placa": "GTL5775",
+      "numeroVehiculo": "549",
+      "ciudad": "GUAYAQUIL",
+      "ultimoInicio": "2026-01-21 13:20",
+      "responsable": "bvalencia@telconet.ec",
+      "horasSinFin": 30.2
+    }
+  ],
+  "sinRegistros": [
+    {
+      "placa": "GCA5799",
+      "numeroVehiculo": "186",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GCT4309",
+      "numeroVehiculo": "316",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GCT4313",
+      "numeroVehiculo": "320",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GCT4336",
+      "numeroVehiculo": "311",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GCT4337",
+      "numeroVehiculo": "315",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GCT4343",
+      "numeroVehiculo": "305",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GCT4350",
+      "numeroVehiculo": "314",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GCT4385",
+      "numeroVehiculo": "323",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GCT4386",
+      "numeroVehiculo": "319",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GRS0188",
+      "numeroVehiculo": "14",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GSH9410",
+      "numeroVehiculo": "37",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GSP5795",
+      "numeroVehiculo": "140",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSH9461",
+      "numeroVehiculo": "35",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GSJ5522",
+      "numeroVehiculo": "80",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSJ6403",
+      "numeroVehiculo": "VAN 90",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSK5873",
+      "numeroVehiculo": "98",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7694",
+      "numeroVehiculo": "623",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSM9913",
+      "numeroVehiculo": "112",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSN1860",
+      "numeroVehiculo": "117",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSO6345",
+      "numeroVehiculo": "VAN 131",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSP5788",
+      "numeroVehiculo": "DMAX143",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSP5791",
+      "numeroVehiculo": "DMAX 141",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSP6778",
+      "numeroVehiculo": "117",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GSQ5207",
+      "numeroVehiculo": "DMAX 151",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSQ5809",
+      "numeroVehiculo": "155",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSQ5813",
+      "numeroVehiculo": "157",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSR3554",
+      "numeroVehiculo": "165",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSR3656",
+      "numeroVehiculo": "158",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSR3661",
+      "numeroVehiculo": "VAN 163",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GST1664",
+      "numeroVehiculo": "146",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GSU1129",
+      "numeroVehiculo": "173",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSU8827",
+      "numeroVehiculo": "DMAX 179",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTD6487",
+      "numeroVehiculo": "DMAX 201",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTD6490",
+      "numeroVehiculo": "204",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTD6491",
+      "numeroVehiculo": "205",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTD8023",
+      "numeroVehiculo": "193",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE2770",
+      "numeroVehiculo": "208",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE2781",
+      "numeroVehiculo": "VAN 217",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE2782",
+      "numeroVehiculo": "218",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE2786",
+      "numeroVehiculo": "220",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE2787",
+      "numeroVehiculo": "221",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE3695",
+      "numeroVehiculo": "VAN 224",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE3696",
+      "numeroVehiculo": "VAN 225",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE3728",
+      "numeroVehiculo": "VAN 227",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE3733",
+      "numeroVehiculo": "232",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE6895",
+      "numeroVehiculo": "187",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTE6897",
+      "numeroVehiculo": "190",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTE6899",
+      "numeroVehiculo": "249",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE6901",
+      "numeroVehiculo": "4",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTE6902",
+      "numeroVehiculo": "188",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTE6929",
+      "numeroVehiculo": "252",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE6930",
+      "numeroVehiculo": "253",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTF5454",
+      "numeroVehiculo": "193",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF5457",
+      "numeroVehiculo": "192",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF5460",
+      "numeroVehiculo": "201",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7271",
+      "numeroVehiculo": "211",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7273",
+      "numeroVehiculo": "213",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7278",
+      "numeroVehiculo": "218",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7287",
+      "numeroVehiculo": "227",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7289",
+      "numeroVehiculo": "229",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7293",
+      "numeroVehiculo": "233",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7295",
+      "numeroVehiculo": "235",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7300",
+      "numeroVehiculo": "240",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7313",
+      "numeroVehiculo": "202",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7314",
+      "numeroVehiculo": "205",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG2553",
+      "numeroVehiculo": "VAN 258",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG2560",
+      "numeroVehiculo": "265",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG2563",
+      "numeroVehiculo": "268",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG2568",
+      "numeroVehiculo": "272",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG2574",
+      "numeroVehiculo": "251",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG6351",
+      "numeroVehiculo": "276",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG6359",
+      "numeroVehiculo": "248",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG6364",
+      "numeroVehiculo": "247",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG6371",
+      "numeroVehiculo": "271",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG6373",
+      "numeroVehiculo": "267",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG6375",
+      "numeroVehiculo": "282",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG6377",
+      "numeroVehiculo": "269",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG6385",
+      "numeroVehiculo": "270",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG8752",
+      "numeroVehiculo": "296",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG8755",
+      "numeroVehiculo": "A07",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG8755",
+      "numeroVehiculo": "292",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "nan",
+      "numeroVehiculo": "nan",
+      "ciudad": "nan"
+    },
+    {
+      "placa": "GTG8761",
+      "numeroVehiculo": "286",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG8765",
+      "numeroVehiculo": "291",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG8778",
+      "numeroVehiculo": "304",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG8779",
+      "numeroVehiculo": "305",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG8781",
+      "numeroVehiculo": "VAN 287",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG8782",
+      "numeroVehiculo": "288",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG8783",
+      "numeroVehiculo": "289",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG8784",
+      "numeroVehiculo": "290",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG8872",
+      "numeroVehiculo": "328",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE2772",
+      "numeroVehiculo": "210",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTH7500",
+      "numeroVehiculo": "363",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTH7503",
+      "numeroVehiculo": "362",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTH7510",
+      "numeroVehiculo": "360",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTI2161",
+      "numeroVehiculo": "335",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI2162",
+      "numeroVehiculo": "336",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI2172",
+      "numeroVehiculo": "346",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI2175",
+      "numeroVehiculo": "349",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI2176",
+      "numeroVehiculo": "VAN 350",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI2177",
+      "numeroVehiculo": "351",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI2198",
+      "numeroVehiculo": "VAN 372",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI5729",
+      "numeroVehiculo": "379",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI5730",
+      "numeroVehiculo": "380",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI5741",
+      "numeroVehiculo": "VAN 391",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI7825",
+      "numeroVehiculo": "405",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI7833",
+      "numeroVehiculo": "329",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTI9896",
+      "numeroVehiculo": "411",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTJ1582",
+      "numeroVehiculo": "351",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTJ1586",
+      "numeroVehiculo": "331",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTJ1587",
+      "numeroVehiculo": "354",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTJ3546",
+      "numeroVehiculo": "418",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO2609",
+      "numeroVehiculo": "577",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTJ5383",
+      "numeroVehiculo": "425",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTJ5385",
+      "numeroVehiculo": "427",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTJ5388",
+      "numeroVehiculo": "GW 430",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTJ5390",
+      "numeroVehiculo": "432",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTJ8807",
+      "numeroVehiculo": "886",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTJ8798",
+      "numeroVehiculo": "439",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTJ8799",
+      "numeroVehiculo": "440",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTJ8800",
+      "numeroVehiculo": "441",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTJ8806",
+      "numeroVehiculo": "447",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTJ8807",
+      "numeroVehiculo": "448",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTK2942",
+      "numeroVehiculo": "470",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTL1900",
+      "numeroVehiculo": "474",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTL1901",
+      "numeroVehiculo": "VAN 475",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTL1907",
+      "numeroVehiculo": "481",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTL1908",
+      "numeroVehiculo": "VAN 482",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTL1932",
+      "numeroVehiculo": "506",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTL2053",
+      "numeroVehiculo": "GW 528",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTL5204",
+      "numeroVehiculo": "534",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO2621",
+      "numeroVehiculo": "589",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7681",
+      "numeroVehiculo": "DMAX 610",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7686",
+      "numeroVehiculo": "615",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7690",
+      "numeroVehiculo": "DMAX 619",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7691",
+      "numeroVehiculo": "620",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7692",
+      "numeroVehiculo": "621",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7693",
+      "numeroVehiculo": "622",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7745",
+      "numeroVehiculo": "636",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7746",
+      "numeroVehiculo": "VAN 637",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7747",
+      "numeroVehiculo": "638",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7748",
+      "numeroVehiculo": "639",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTP1155",
+      "numeroVehiculo": "753",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTP1271",
+      "numeroVehiculo": "552",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP1273",
+      "numeroVehiculo": "554",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP1275",
+      "numeroVehiculo": "556",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP1279",
+      "numeroVehiculo": "560",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP1283",
+      "numeroVehiculo": "564",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP1301",
+      "numeroVehiculo": "571",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP1382",
+      "numeroVehiculo": "603",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ1027",
+      "numeroVehiculo": "421",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ1054",
+      "numeroVehiculo": "629",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ1055",
+      "numeroVehiculo": "630",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ1056",
+      "numeroVehiculo": "631",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ1058",
+      "numeroVehiculo": "633",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ1063",
+      "numeroVehiculo": "445",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ1065",
+      "numeroVehiculo": "447",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ1281",
+      "numeroVehiculo": "571",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ1282",
+      "numeroVehiculo": "VAN 572",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ2205",
+      "numeroVehiculo": "VAN 642",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ2209",
+      "numeroVehiculo": "646",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ2210",
+      "numeroVehiculo": "647",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ2216",
+      "numeroVehiculo": "650",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ2217",
+      "numeroVehiculo": "651",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ8323",
+      "numeroVehiculo": "464",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ8326",
+      "numeroVehiculo": "467",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ8328",
+      "numeroVehiculo": "469",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ8330",
+      "numeroVehiculo": "471",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ8361",
+      "numeroVehiculo": "474",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ8387",
+      "numeroVehiculo": "489",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ8430",
+      "numeroVehiculo": "VAN 675",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ8487",
+      "numeroVehiculo": "517",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ8501",
+      "numeroVehiculo": "701",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ8902",
+      "numeroVehiculo": "721",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ8978",
+      "numeroVehiculo": "733",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTR7398",
+      "numeroVehiculo": "DMAX 791",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTR7400",
+      "numeroVehiculo": "DMAX 793",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTR7420",
+      "numeroVehiculo": "804",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ8442",
+      "numeroVehiculo": "687",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTS2427",
+      "numeroVehiculo": "VAN 18",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTS2475",
+      "numeroVehiculo": "604",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTS2485",
+      "numeroVehiculo": "614",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTS5641",
+      "numeroVehiculo": "74",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTS5641",
+      "numeroVehiculo": "CONTRATISTA #74 ",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3038",
+      "numeroVehiculo": "883",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3039",
+      "numeroVehiculo": "884",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3040",
+      "numeroVehiculo": "855",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3041",
+      "numeroVehiculo": "886",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3047",
+      "numeroVehiculo": "887",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3051",
+      "numeroVehiculo": "891",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3056",
+      "numeroVehiculo": "895",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3057",
+      "numeroVehiculo": "896",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSB7218",
+      "numeroVehiculo": "12",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3062",
+      "numeroVehiculo": "901",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3063",
+      "numeroVehiculo": "902",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3107",
+      "numeroVehiculo": "903",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3108",
+      "numeroVehiculo": "904",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3109",
+      "numeroVehiculo": "905",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3112",
+      "numeroVehiculo": "908",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3113",
+      "numeroVehiculo": "909",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3114",
+      "numeroVehiculo": "910",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTT3116",
+      "numeroVehiculo": "912",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTW1167",
+      "numeroVehiculo": "638",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTW1172",
+      "numeroVehiculo": "643",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCF5449",
+      "numeroVehiculo": "69",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCJ8113",
+      "numeroVehiculo": "66",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCJ8114",
+      "numeroVehiculo": "62",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCK9111",
+      "numeroVehiculo": "72",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCL4027",
+      "numeroVehiculo": "82",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCL4397",
+      "numeroVehiculo": "78",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCM6338",
+      "numeroVehiculo": "93",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCM6904",
+      "numeroVehiculo": "91",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCM8136",
+      "numeroVehiculo": "106",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCO3636",
+      "numeroVehiculo": "111",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCO3900",
+      "numeroVehiculo": "116",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCO3940",
+      "numeroVehiculo": "114",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCO4163",
+      "numeroVehiculo": "115",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCQ4463",
+      "numeroVehiculo": "123",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCS8115",
+      "numeroVehiculo": "135",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCU1285",
+      "numeroVehiculo": "148",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCU1288",
+      "numeroVehiculo": "151",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCV7133",
+      "numeroVehiculo": "A15",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTI2182",
+      "numeroVehiculo": "356",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PCZ1927",
+      "numeroVehiculo": "R12",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PDV6242",
+      "numeroVehiculo": "R32",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PCZ1932",
+      "numeroVehiculo": "17",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTL1936",
+      "numeroVehiculo": "510",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PCZ1936",
+      "numeroVehiculo": "R21",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PCZ1937",
+      "numeroVehiculo": "R22 CONTRATISTA ",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PCZ1938",
+      "numeroVehiculo": "R23",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PCZ1941",
+      "numeroVehiculo": "26R",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PCZ1943",
+      "numeroVehiculo": "R28",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PCZ1944",
+      "numeroVehiculo": "R29",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PCZ1945",
+      "numeroVehiculo": "R30",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PDD1819",
+      "numeroVehiculo": "A48",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDL6517",
+      "numeroVehiculo": "161",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDL6861",
+      "numeroVehiculo": "155",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDL8296",
+      "numeroVehiculo": "3",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDM4711",
+      "numeroVehiculo": "244",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDN2604",
+      "numeroVehiculo": "154",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDN9717",
+      "numeroVehiculo": "176",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDN9770",
+      "numeroVehiculo": "159",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDN9812",
+      "numeroVehiculo": "165",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDN9816",
+      "numeroVehiculo": "164",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDO2315",
+      "numeroVehiculo": "175",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDO2328",
+      "numeroVehiculo": "C173",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDO8521",
+      "numeroVehiculo": "R1",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PDO8523",
+      "numeroVehiculo": "R2",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PDO8526",
+      "numeroVehiculo": "R4",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PDO8531",
+      "numeroVehiculo": "R7",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PDV6247",
+      "numeroVehiculo": "R33",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PDV9753",
+      "numeroVehiculo": "A32",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PFD1655",
+      "numeroVehiculo": "k1",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTL5777",
+      "numeroVehiculo": "551",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ8427",
+      "numeroVehiculo": "672",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ8351",
+      "numeroVehiculo": "662",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GCA5798",
+      "numeroVehiculo": "185",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PFG9779",
+      "numeroVehiculo": "A25",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF5458",
+      "numeroVehiculo": "12",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTL2051",
+      "numeroVehiculo": "526",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GCA5800",
+      "numeroVehiculo": "187",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTL5791",
+      "numeroVehiculo": "540",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTW1162",
+      "numeroVehiculo": "633",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSJ4125",
+      "numeroVehiculo": "48",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PDL6869",
+      "numeroVehiculo": "162",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTI2174",
+      "numeroVehiculo": "VAN 348",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PDL8304",
+      "numeroVehiculo": "11",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCM6908",
+      "numeroVehiculo": "90",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ8428",
+      "numeroVehiculo": "673",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PCU1289",
+      "numeroVehiculo": "149",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ8437",
+      "numeroVehiculo": "682",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ1038",
+      "numeroVehiculo": "441",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTI5743",
+      "numeroVehiculo": "VAN 393",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PCL3815",
+      "numeroVehiculo": "86",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "PCL4284",
+      "numeroVehiculo": "80",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTI2206",
+      "numeroVehiculo": "VAN 376",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI5734",
+      "numeroVehiculo": "VAN 384",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG2569",
+      "numeroVehiculo": "268",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GCA5802",
+      "numeroVehiculo": "VAN 190",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ1046",
+      "numeroVehiculo": "432",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ1068",
+      "numeroVehiculo": "450",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ1053",
+      "numeroVehiculo": "628",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTP1381",
+      "numeroVehiculo": "602",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP2105",
+      "numeroVehiculo": "537",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ1060",
+      "numeroVehiculo": "442",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTE4105",
+      "numeroVehiculo": "240",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG6473",
+      "numeroVehiculo": "282",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTI7819",
+      "numeroVehiculo": "399",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTR7385",
+      "numeroVehiculo": "778",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ2206",
+      "numeroVehiculo": "643",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE3731",
+      "numeroVehiculo": "230",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "PDO8524",
+      "numeroVehiculo": "R3",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GCT4302",
+      "numeroVehiculo": "309",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTS2484",
+      "numeroVehiculo": "613",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG8763",
+      "numeroVehiculo": "299",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7299",
+      "numeroVehiculo": "239",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP1276",
+      "numeroVehiculo": "557",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF7290",
+      "numeroVehiculo": "230",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP1281",
+      "numeroVehiculo": "562",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTF5462",
+      "numeroVehiculo": "194",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTG8756",
+      "numeroVehiculo": "297",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP1278",
+      "numeroVehiculo": "559",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP1267",
+      "numeroVehiculo": "548",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTE6903",
+      "numeroVehiculo": "189",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTP1270",
+      "numeroVehiculo": "551",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTQ1029",
+      "numeroVehiculo": "423",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTW3325",
+      "numeroVehiculo": "650",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GTI2196",
+      "numeroVehiculo": "370",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE4107",
+      "numeroVehiculo": "241",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTE6900",
+      "numeroVehiculo": "250",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI5732",
+      "numeroVehiculo": "382",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSJ6479",
+      "numeroVehiculo": "92",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI7826",
+      "numeroVehiculo": "406",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTQ1051",
+      "numeroVehiculo": "626",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GCT4306",
+      "numeroVehiculo": "313",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI7820",
+      "numeroVehiculo": "400",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTS2494",
+      "numeroVehiculo": "623",
+      "ciudad": "QUITO"
+    },
+    {
+      "placa": "GCT4305",
+      "numeroVehiculo": "312",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTO7744",
+      "numeroVehiculo": "635",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GSM9912",
+      "numeroVehiculo": "111",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI2173",
+      "numeroVehiculo": "347",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTI2185",
+      "numeroVehiculo": "359",
+      "ciudad": "GUAYAQUIL"
+    },
+    {
+      "placa": "GTG8760",
+      "numeroVehiculo": "290",
+      "ciudad": "QUITO"
+    }
+  ],
+  "irregularidades": []
+}

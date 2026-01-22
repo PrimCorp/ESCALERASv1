@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspector Vehicular - Telconet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .controls {
+            padding: 30px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .date-input {
+            flex: 0 0 auto;
+        }
+
+        .date-input label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .date-input input {
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .date-input input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card.success { border-left-color: #28a745; }
+        .stat-card.warning { border-left-color: #ffc107; }
+        .stat-card.danger { border-left-color: #dc3545; }
+        .stat-card.info { border-left-color: #17a2b8; }
+
+        .stat-card h3 {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-card .value {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-card.success .value { color: #28a745; }
+        .stat-card.warning .value { color: #ffc107; }
+        .stat-card.danger .value { color: #dc3545; }
+        .stat-card.info .value { color: #17a2b8; }
+
+        .stat-card .percentage {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .report-section {
+            padding: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            font-size: 28px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        th {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge-danger {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .badge-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+            border-top: 2px solid #e9ecef;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚗 Inspector Vehicular</h1>
+            <p>Sistema de Control de Inspecciones - Telconet</p>
+        </div>
+
+        <div class="controls">
+            <div class="date-input">
+                <label for="fechaReporte">Fecha del Reporte:</label>
+                <input type="date" id="fechaReporte" value="2026-01-21" />
+            </div>
+            <button class="btn btn-primary" onclick="cargarReporte()">
+                📊 Ver Reporte
+            </button>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Cargando datos...</p>
+        </div>
+
+        <div id="reporteContainer">
+            <div class="stats" id="statsContainer"></div>
+
+            <div class="report-section">
+                <h2 class="section-title">
+                    <span class="section-icon">⚠️</span>
+                    Salieron pero NO Registraron Regreso
+                </h2>
+                <div class="table-container" id="tablaSinFin"></div>
+            </div>
+
+            <div class="report-section">
+                <h2 class="section-title">
+                    <span class="section-icon">❓</span>
+                    Sin Registros (Verificar si Salieron)
+                </h2>
+                <div class="table-container" id="tablaSinRegistros"></div>
+            </div>
+
+            <div class="report-section">
+                <h2 class="section-title">
+                    <span class="section-icon">✅</span>
+                    Cumplimiento Completo
+                </h2>
+                <div class="table-container" id="tablaCompletos"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Inspector Vehicular v1.0</strong></p>
+            <p>© 2026 Telconet - Control de Activos | Desarrollado por Danny Rodriguez</p>
+        </div>
+    </div>
+
+    <script>
+        let datosReporte = null;
+
+        // Cargar datos al iniciar
+        window.addEventListener('DOMContentLoaded', () => {
+            cargarReporte();
+        });
+
+        async function cargarReporte() {
+            try {
+                document.getElementById('loading').style.display = 'block';
+                document.getElementById('reporteContainer').style.display = 'none';
+
+                const response = await fetch('datos.json');
+                datosReporte = await response.json();
+
+                mostrarReporte(datosReporte);
+
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('reporteContainer').style.display = 'block';
+            } catch (error) {
+                console.error('Error cargando datos:', error);
+                alert('Error al cargar los datos. Verifica que el archivo datos.json existe.');
+            }
+        }
+
+        function mostrarReporte(reporte) {
+            mostrarEstadisticas(reporte.resumen);
+            mostrarTablaSinFin(reporte.sinFin);
+            mostrarTablaSinRegistros(reporte.sinRegistros);
+            mostrarTablaCompletos(reporte.completos);
+        }
+
+        function mostrarEstadisticas(resumen) {
+            const html = `
+                <div class="stat-card success">
+                    <h3>Cumplimiento Completo</h3>
+                    <div class="value">${resumen.completos}</div>
+                    <div class="percentage">${resumen.porcentajeCompletos}% del total</div>
+                </div>
+                <div class="stat-card warning">
+                    <h3>Falta Registro FIN</h3>
+                    <div class="value">${resumen.sinFin}</div>
+                    <div class="percentage">${resumen.porcentajeSinFin}% - Requiere memo</div>
+                </div>
+                <div class="stat-card info">
+                    <h3>Sin Registros</h3>
+                    <div class="value">${resumen.sinRegistros}</div>
+                    <div class="percentage">${resumen.porcentajeSinRegistros}% - Verificar salida</div>
+                </div>
+                <div class="stat-card danger">
+                    <h3>Irregularidades</h3>
+                    <div class="value">${resumen.irregularidades}</div>
+                    <div class="percentage">Investigar urgente</div>
+                </div>
+            `;
+            document.getElementById('statsContainer').innerHTML = html;
+        }
+
+        function mostrarTablaSinFin(datos) {
+            if (datos.length === 0) {
+                document.getElementById('tablaSinFin').innerHTML = crearEmptyState('✅', 'Todos registraron su regreso');
+                return;
+            }
+
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>N° Vehículo</th>
+                            <th>Ciudad</th>
+                            <th>Inicio</th>
+                            <th>Responsable</th>
+                            <th>Horas Sin FIN</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            datos.forEach(item => {
+                html += `
+                    <tr>
+                        <td><strong>${item.placa}</strong></td>
+                        <td>${item.numeroVehiculo}</td>
+                        <td>${item.ciudad}</td>
+                        <td>${item.ultimoInicio}</td>
+                        <td>${item.responsable}</td>
+                        <td>${item.horasSinFin.toFixed(1)}h</td>
+                        <td><span class="badge badge-danger">MEMO REQUERIDO</span></td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            document.getElementById('tablaSinFin').innerHTML = html;
+        }
+
+        function mostrarTablaSinRegistros(datos) {
+            if (datos.length === 0) {
+                document.getElementById('tablaSinRegistros').innerHTML = crearEmptyState('✅', 'Todos tienen registros');
+                return;
+            }
+
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>N° Vehículo</th>
+                            <th>Ciudad</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            // Mostrar solo primeros 20
+            const mostrar = datos.slice(0, 20);
+            mostrar.forEach(item => {
+                html += `
+                    <tr>
+                        <td><strong>${item.placa}</strong></td>
+                        <td>${item.numeroVehiculo}</td>
+                        <td>${item.ciudad}</td>
+                        <td><span class="badge badge-warning">VERIFICAR SI SALIÓ</span></td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            
+            if (datos.length > 20) {
+                html += `<p style="text-align: center; padding: 20px; color: #6c757d;">Mostrando 20 de ${datos.length} vehículos sin registros</p>`;
+            }
+
+            document.getElementById('tablaSinRegistros').innerHTML = html;
+        }
+
+        function mostrarTablaCompletos(datos) {
+            if (datos.length === 0) {
+                document.getElementById('tablaCompletos').innerHTML = crearEmptyState('❌', 'No hay registros completos');
+                return;
+            }
+
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>N° Vehículo</th>
+                            <th>Ciudad</th>
+                            <th>Turnos</th>
+                            <th>Horarios</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            datos.forEach(item => {
+                const horarios = item.inicios.map((inicio, i) => `${inicio} - ${item.fines[i]}`).join('<br>');
+                html += `
+                    <tr>
+                        <td><strong>${item.placa}</strong></td>
+                        <td>${item.numeroVehiculo}</td>
+                        <td>${item.ciudad}</td>
+                        <td>${item.turnos}</td>
+                        <td>${horarios}</td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            document.getElementById('tablaCompletos').innerHTML = html;
+        }
+
+        function crearEmptyState(icon, message) {
+            return `
+                <div class="empty-state">
+                    <div class="empty-state-icon">${icon}</div>
+                    <h3>${message}</h3>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

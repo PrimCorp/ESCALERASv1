@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Inspecciones Vehiculares - Telconet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .controls {
+            padding: 30px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .date-input {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .date-input label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .date-input input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .date-input input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+            color: white;
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(86, 171, 47, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            display: none;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card.success { border-left-color: #28a745; }
+        .stat-card.warning { border-left-color: #ffc107; }
+        .stat-card.danger { border-left-color: #dc3545; }
+        .stat-card.info { border-left-color: #17a2b8; }
+
+        .stat-card h3 {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-card .value {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-card.success .value { color: #28a745; }
+        .stat-card.warning .value { color: #ffc107; }
+        .stat-card.danger .value { color: #dc3545; }
+        .stat-card.info .value { color: #17a2b8; }
+
+        .stat-card .percentage {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .report-section {
+            padding: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            font-size: 28px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        th {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge-success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .badge-danger {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .badge-info {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+            border-top: 2px solid #e9ecef;
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+            }
+
+            .date-input {
+                width: 100%;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚗 Control de Inspecciones Vehiculares</h1>
+            <p>Sistema de Control de Activos - Telconet</p>
+        </div>
+
+        <div class="controls">
+            <div class="date-input">
+                <label for="fechaReporte">Fecha del Reporte:</label>
+                <input type="date" id="fechaReporte" />
+            </div>
+            <button class="btn btn-primary" onclick="generarReporte()" id="btnGenerar">
+                📊 Generar Reporte
+            </button>
+            <button class="btn btn-success" onclick="exportarExcel()" id="btnExportar" disabled>
+                📥 Exportar Excel
+            </button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Generando reporte, por favor espera...</p>
+        </div>
+
+        <div id="reporteContainer" style="display: none;">
+            <div class="stats" id="statsContainer"></div>
+
+            <div class="report-section">
+                <h2 class="section-title">
+                    <span class="section-icon">✅</span>
+                    Cumplimiento Completo
+                </h2>
+                <div class="table-container" id="tablaCompletos"></div>
+            </div>
+
+            <div class="report-section">
+                <h2 class="section-title">
+                    <span class="section-icon">⚠️</span>
+                    Salieron pero NO Registraron Regreso
+                </h2>
+                <div class="table-container" id="tablaSinFin"></div>
+            </div>
+
+            <div class="report-section">
+                <h2 class="section-title">
+                    <span class="section-icon">❓</span>
+                    Sin Registros (Verificar si Salieron)
+                </h2>
+                <div class="table-container" id="tablaSinRegistros"></div>
+            </div>
+
+            <div class="report-section">
+                <h2 class="section-title">
+                    <span class="section-icon">🚨</span>
+                    Irregularidades Detectadas
+                </h2>
+                <div class="table-container" id="tablaIrregularidades"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Telconet - Control de Activos | Desarrollado por Danny Rodriguez</p>
+        </div>
+    </div>
+
+    <script>
+        // Establecer fecha actual por defecto
+        document.getElementById('fechaReporte').valueAsDate = new Date();
+
+        let reporteActual = null;
+
+        function generarReporte() {
+            const fecha = document.getElementById('fechaReporte').value;
+            
+            if (!fecha) {
+                alert('Por favor selecciona una fecha');
+                return;
+            }
+
+            // Mostrar loading
+            document.getElementById('loading').classList.add('active');
+            document.getElementById('reporteContainer').style.display = 'none';
+            document.getElementById('btnGenerar').disabled = true;
+            document.getElementById('btnExportar').disabled = true;
+
+            // Llamar al servidor
+            google.script.run
+                .withSuccessHandler(mostrarReporte)
+                .withFailureHandler(mostrarError)
+                .generarReporteDiario(fecha);
+        }
+
+        function mostrarReporte(reporte) {
+            reporteActual = reporte;
+            
+            // Ocultar loading
+            document.getElementById('loading').classList.remove('active');
+            document.getElementById('reporteContainer').style.display = 'block';
+            document.getElementById('btnGenerar').disabled = false;
+            document.getElementById('btnExportar').disabled = false;
+
+            // Mostrar estadísticas
+            mostrarEstadisticas(reporte.resumen);
+
+            // Mostrar tablas
+            mostrarTablaCompletos(reporte.completos);
+            mostrarTablaSinFin(reporte.sinFin);
+            mostrarTablaSinRegistros(reporte.sinRegistros);
+            mostrarTablaIrregularidades(reporte.irregularidades);
+        }
+
+        function mostrarEstadisticas(resumen) {
+            const html = `
+                <div class="stat-card success">
+                    <h3>Cumplimiento Completo</h3>
+                    <div class="value">${resumen.completos}</div>
+                    <div class="percentage">${resumen.porcentajeCompletos}% del total</div>
+                </div>
+                <div class="stat-card warning">
+                    <h3>Falta Registro FIN</h3>
+                    <div class="value">${resumen.sinFin}</div>
+                    <div class="percentage">${resumen.porcentajeSinFin}% - Requiere memo</div>
+                </div>
+                <div class="stat-card info">
+                    <h3>Sin Registros</h3>
+                    <div class="value">${resumen.sinRegistros}</div>
+                    <div class="percentage">${resumen.porcentajeSinRegistros}% - Verificar salida</div>
+                </div>
+                <div class="stat-card danger">
+                    <h3>Irregularidades</h3>
+                    <div class="value">${resumen.irregularidades}</div>
+                    <div class="percentage">Investigar urgente</div>
+                </div>
+            `;
+            document.getElementById('statsContainer').innerHTML = html;
+        }
+
+        function mostrarTablaCompletos(datos) {
+            if (datos.length === 0) {
+                document.getElementById('tablaCompletos').innerHTML = crearEmptyState('✅', 'No hay registros completos');
+                return;
+            }
+
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>N° Vehículo</th>
+                            <th>Ciudad</th>
+                            <th>Inicio</th>
+                            <th>Fin</th>
+                            <th>Responsable</th>
+                            <th>Turnos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            datos.forEach(item => {
+                html += `
+                    <tr>
+                        <td><strong>${item.placa}</strong></td>
+                        <td>${item.numeroVehiculo}</td>
+                        <td>${item.ciudad}</td>
+                        <td>${item.inicios.join('<br>')}</td>
+                        <td>${item.fines.join('<br>')}</td>
+                        <td>${item.responsables.join('<br>')}</td>
+                        <td><span class="badge badge-success">${item.turnos} ${item.turnos > 1 ? 'turnos' : 'turno'}</span></td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            document.getElementById('tablaCompletos').innerHTML = html;
+        }
+
+        function mostrarTablaSinFin(datos) {
+            if (datos.length === 0) {
+                document.getElementById('tablaSinFin').innerHTML = crearEmptyState('✅', '¡Excelente! Todos registraron su regreso');
+                return;
+            }
+
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>N° Vehículo</th>
+                            <th>Ciudad</th>
+                            <th>Inicio</th>
+                            <th>Responsable</th>
+                            <th>Horas Sin FIN</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            datos.forEach(item => {
+                html += `
+                    <tr>
+                        <td><strong>${item.placa}</strong></td>
+                        <td>${item.numeroVehiculo}</td>
+                        <td>${item.ciudad}</td>
+                        <td>${item.ultimoInicio}</td>
+                        <td>${item.responsable}</td>
+                        <td>${item.horasSinFin.toFixed(1)}h</td>
+                        <td><span class="badge badge-danger">MEMO REQUERIDO</span></td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            document.getElementById('tablaSinFin').innerHTML = html;
+        }
+
+        function mostrarTablaSinRegistros(datos) {
+            if (datos.length === 0) {
+                document.getElementById('tablaSinRegistros').innerHTML = crearEmptyState('✅', 'Todos los vehículos tienen registros');
+                return;
+            }
+
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>N° Vehículo</th>
+                            <th>Ciudad</th>
+                            <th>Acción Requerida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            datos.forEach(item => {
+                html += `
+                    <tr>
+                        <td><strong>${item.placa}</strong></td>
+                        <td>${item.numeroVehiculo}</td>
+                        <td>${item.ciudad}</td>
+                        <td><span class="badge badge-warning">VERIFICAR SI SALIÓ</span></td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            document.getElementById('tablaSinRegistros').innerHTML = html;
+        }
+
+        function mostrarTablaIrregularidades(datos) {
+            if (datos.length === 0) {
+                document.getElementById('tablaIrregularidades').innerHTML = crearEmptyState('✅', 'No se detectaron irregularidades');
+                return;
+            }
+
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>Fecha/Hora</th>
+                            <th>Responsables</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            datos.forEach(item => {
+                html += `
+                    <tr>
+                        <td><strong>${item.placa}</strong></td>
+                        <td>${item.fechaHora}</td>
+                        <td>${item.responsables.join(', ')}</td>
+                        <td><span class="badge badge-danger">INVESTIGAR URGENTE</span></td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            document.getElementById('tablaIrregularidades').innerHTML = html;
+        }
+
+        function crearEmptyState(icon, message) {
+            return `
+                <div class="empty-state">
+                    <div class="empty-state-icon">${icon}</div>
+                    <h3>${message}</h3>
+                </div>
+            `;
+        }
+
+        function mostrarError(error) {
+            document.getElementById('loading').classList.remove('active');
+            document.getElementById('btnGenerar').disabled = false;
+            alert('Error al generar el reporte: ' + error.message);
+        }
+
+        function exportarExcel() {
+            if (!reporteActual) {
+                alert('Primero genera un reporte');
+                return;
+            }
+
+            const fecha = document.getElementById('fechaReporte').value;
+            google.script.run
+                .withSuccessHandler(() => alert('Reporte exportado exitosamente'))
+                .withFailureHandler(error => alert('Error al exportar: ' + error.message))
+                .exportarReporteExcel(reporteActual, fecha);
+        }
+    </script>
+</body>
+</html>
